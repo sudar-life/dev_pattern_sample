@@ -10,11 +10,11 @@ class MVCView extends StatefulWidget {
 }
 
 class _MVCViewState extends StateMVC<MVCView> {
-  _MVCViewState() : super(MVCControlelr()) {
-    con = controller as MVCControlelr;
+  _MVCViewState() : super(MVCController()) {
+    con = controller as MVCController;
   }
 
-  late MVCControlelr con;
+  late MVCController con;
 
   @override
   Widget build(BuildContext context) {

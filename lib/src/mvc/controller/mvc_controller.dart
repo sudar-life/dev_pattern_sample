@@ -1,14 +1,14 @@
 import 'package:dev_pattern_sample/src/model/model.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
-class MVCControlelr extends ControllerMVC {
-  factory MVCControlelr([StateMVC? state]) => _this ??= MVCControlelr._(state);
+class MVCController extends ControllerMVC {
+  factory MVCController([StateMVC? state]) => _this ??= MVCController._(state);
 
-  MVCControlelr._(StateMVC? state)
+  MVCController._(StateMVC? state)
       : _model = Model(),
         super(state);
 
-  static MVCControlelr? _this;
+  static MVCController? _this;
   final Model _model;
 
   int get count => _model.counter;
