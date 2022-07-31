@@ -14,7 +14,7 @@ class MVVMGetxView extends GetView<MVVMGetxController> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Obx(
-              () => Text(controller.model.value.counter.toString(),
+              () => Text(controller.count.toString(),
                   style: TextStyle(fontSize: 150)),
             ),
             Row(

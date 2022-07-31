@@ -2,17 +2,22 @@ import 'package:dev_pattern_sample/src/model/model.dart';
 import 'package:get/get.dart';
 
 class MVVMGetxController extends GetxController {
-  Rx<Model> model = Model().obs;
+  late Model model;
+  RxInt count = 0.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    model = Model();
+  }
 
   void incrementCounter() {
-    model.update((val) {
-      val!.incrementCounter();
-    });
+    model.incrementCounter();
+    count(model.counter);
   }
 
   void decreamentCounter() {
-    model.update((val) {
-      val!.decrementCounter();
-    });
+    model.decrementCounter();
+    count(model.counter);
   }
 }

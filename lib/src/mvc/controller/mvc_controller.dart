@@ -5,23 +5,21 @@ class MVCController extends ControllerMVC {
   factory MVCController([StateMVC? state]) => _this ??= MVCController._(state);
 
   MVCController._(StateMVC? state)
-      : _model = Model(),
+      : model = Model(),
         super(state);
 
   static MVCController? _this;
-  final Model _model;
-
-  int get count => _model.counter;
+  final Model model;
 
   void update() => setState(() {});
 
   void incrementCounter() {
-    _model.incrementCounter();
+    model.incrementCounter();
     update();
   }
 
   void decreamentCounter() {
-    _model.decrementCounter();
+    model.decrementCounter();
     update();
   }
 }

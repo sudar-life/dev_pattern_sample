@@ -24,7 +24,7 @@ class _MVCViewState extends StateMVC<MVCView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(con.count.toString(), style: TextStyle(fontSize: 150)),
+            Text(con.model.counter.toString(), style: TextStyle(fontSize: 150)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
